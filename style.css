@@ -1,0 +1,10 @@
+
+.nav {
+    background-color:cadetblue;
+    display: inline-flex;
+    width: 100vw;
+}
+
+.nav__list {
+    list-style: none;
+}
