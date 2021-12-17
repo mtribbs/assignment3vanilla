@@ -4,28 +4,36 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/ffd75b5bb7.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="/style.css">
     <title>Vanilla</title>
 </head>
-<body>
-    <header>
-        <nav class="nav" id="navBar">
-            <h2>Menu</h2>
-            <ul class="nav__list">
-                <li>About</li>
-                <li>Subscription</li>
-                <li>Contact</li>
-            </ul>
+<body class="body">
+    <header class="header">
+        <nav class="nav" id="navbar">
+            <button class="menu__btn"><i class="fas fa-bars" id="menubtn"></i></button>
+            <div class="dropdown" id="dropdown">
+                <ul class="nav__list" id="navlist">
+                    <li class="list__item">About</li>
+                    <li class="list__item">Subscription</li>
+                    <li class="list__item">Contact</li>
+                </ul>
+            </div>
         </nav>
     </header>
-    <main>
-        <div class="title">
-            <h1>Vanilla</h1>
-        </div>
-        <div class="form__box">
-            <form action="">
-                <p>Start your free trial!</p>
-            </form>
+    <main class="main">
+        <div class="container--content">
+            <h1 class="title">Vanilla</h1>
+            <div class="form__box">
+                <form action="">
+                    <p class="form__title">Sign up for 7 days free trial!</p>
+                    <label for="fname">First name:</label>
+                    <input type="text" id="fname">
+                    <label for="lname">Last name:</label>
+                    <input type="text" id="lname">
+                    <input type="submit" class="btn--submit">
+                </form>
+            </div>
         </div>
     </main>
 <script src="/script.js"></script>
