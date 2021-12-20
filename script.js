@@ -4,11 +4,18 @@
 const menuBtn = document.getElementById("menubtn");
 const dropDown = document.getElementById("dropdown");
 
-// hide dropdown menu
+const formBox = document.getElementById("formbox");
+const signUpBtn = document.getElementById("btnsignup");
+const signUpBox = document.getElementById("signup");
+
+// hide
 
 dropDown.style.display = "none";
 
-// menu function
+formBox.style.display = "none";
+
+
+//functions
 
 function menuClosed() {
     dropDown.style.display = "none";  
@@ -19,6 +26,17 @@ function menuOpen() {
 }
 
 
+function formClosed() {
+    formBox.style.display = "none";
+    signUpBox.style.display = "block";
+}
+
+function formOpen() {
+    formBox.style.display = "flex";
+    signUpBox.style.display = "none";
+}
+
+//
 
 function openMenu() {
     if (dropDown.style.display === "none") {
@@ -29,15 +47,37 @@ function openMenu() {
     }
 }
 
+function openForm() {
+    if (formBox.style.display === "none") {
+        return formOpen();
+    }
+    else {
+        return formClosed();
+    }
+}
+
+
 // event listeners
 
 menuBtn.addEventListener("click", openMenu);
 
+document.addEventListener('click', function(menuClick) {
+  const clickOnMenuBtn = menuBtn.contains(menuClick.target);
+  const clickInsideMenu = dropDown.contains(menuClick.target);
 
-document.addEventListener('click', function(event) {
-  const isClickInside = menuBtn.contains(event.target);
-
-  if (!isClickInside) {
+  if (!clickOnMenuBtn && !clickInsideMenu) {
     return menuClosed();
   }
+});
+
+
+signUpBtn.addEventListener("click", openForm);
+
+document.addEventListener("click", function(formClick) {
+    const clickOnSignUp = signUpBtn.contains(formClick.target);
+    const clickInsideForm = formBox.contains(formClick.target);
+  
+    if (!clickOnSignUp && !clickInsideForm) {
+        return formClosed();
+    }
 });
