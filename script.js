@@ -7,6 +7,7 @@ const dropDown = document.getElementById("dropdown");
 const formBox = document.getElementById("formbox");
 const signUpBtn = document.getElementById("btnsignup");
 const signUpBox = document.getElementById("signup");
+const exitBtn = document.getElementById("exitbtn");
 
 // hide
 
@@ -81,3 +82,5 @@ document.addEventListener("click", function(formClick) {
         return formClosed();
     }
 });
+
+exitBtn.addEventListener("click", formClosed);

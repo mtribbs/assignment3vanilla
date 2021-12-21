@@ -5,6 +5,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://kit.fontawesome.com/ffd75b5bb7.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/style.css">
     <title>Vanilla</title>
 </head>
@@ -25,12 +28,15 @@
         <div class="container--content">
             <h1 class="title">Vanilla</h1>
             <div class="signup" id="signup">
-                <p>Want a 7 day free trial?</p>
+                <h2>Want a 7 day free trial?</h2>
                 <button class="btn--signup" id="btnsignup">Yes please!</button>
             </div>
             <div class="form__box" id="formbox">
                 <form class="form" action="" id="form">
-                    <p class="form__title">Sign up for a 7 days free trial!</p>
+                    <div class="btn--container">
+                        <button id="exitbtn" class="btn--exit"><i class="fas fa-times"></i></button>
+                    </div>                    
+                    <h3 class="form__title">Register below for a 7 day free trial!</h3>
                     <label for="fname">First name:</label>
                     <input type="text" id="fname" placeholder="Enter your first name">
                     <label for="lname">Last name:</label>
@@ -39,7 +45,7 @@
                     <input type="email" id="email" required placeholder="Enter your email">
                     <div>
                         <input type="checkbox" required>
-                        <label for="checkbox">I agree to the <a href="">terms & conditions</a></label>
+                        <label for="checkbox">I agree to the <a href="">terms and conditions</a></label>
                     </div>
                     <input type="submit" class="btn--submit">
                 </form>
